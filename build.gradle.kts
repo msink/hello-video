@@ -33,12 +33,22 @@ kotlin {
             entryPoint = "sample.videoplayer.main"
             linkerOpts(
                 "-L${msys2.resolve("${targetName}/lib")}",
-                "-lavutil",
-                "-lavformat",
-                "-lavcodec",
-                "-lswscale",
-                "-lswresample",
-                "-lSDL2"
+                "-Wl,-Bstatic",
+                "-lstdc++",
+                "-static",
+                "-l:libavutil.dll.a",
+                "-l:libavformat.dll.a",
+                "-l:libavcodec.dll.a",
+                "-l:libswscale.dll.a",
+                "-l:libswresample.dll.a",
+                "-lSDL2",
+                "-lgdi32",
+                "-limm32",
+                "-lole32",
+                "-loleaut32",
+                "-lversion",
+                "-lwinmm",
+                "-lsetupapi"
             )
         }
     }
