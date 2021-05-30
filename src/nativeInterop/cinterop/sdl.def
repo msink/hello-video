@@ -1,0 +1,4 @@
+package = sdl
+headers = SDL.h
+headerFilter = SDL*
+entryPoint = SDL_main
