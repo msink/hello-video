@@ -45,13 +45,10 @@ kotlin {
 
                 "-l:libaom.dll.a",
                 "-l:libbluray.dll.a",
-                "-l:libbz2.dll.a",
                 "-l:libcelt0.dll.a",
                 "-l:libdav1d.dll.a",
                 "-l:libgnutls.dll.a",
                 "-l:libgsm.dll.a",
-                "-l:libiconv.dll.a",
-                "-l:liblzma.dll.a",
                 "-l:libmfx.dll.a",
                 "-l:libmp3lame.dll.a",
                 "-l:libmodplug.dll.a",
@@ -75,7 +72,11 @@ kotlin {
                 "-l:libx265.dll.a",
                 "-l:libxml2.dll.a",
                 "-l:xvidcore.dll.a",
-                "-l:libz.dll.a",
+
+                "-liconv",
+                "-lbz2",
+                "-llzma",
+                "-lz",
 
                 "-lbcrypt",
                 "-lgdi32",
